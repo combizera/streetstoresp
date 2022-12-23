@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Colors
+$red-dark: #780000;
+$red-normal: #9d1515;
+$black-dark: #222;
+$black-normal: #555;
+$black-light: #aaa;
+
+// Responsive
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: $black-normal;
+  font-size: 1.125rem;
+  line-height: 130%;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 5rem;
+}
+
+// Responsividade
+
+@mixin responsive($device) {
+  @if $device == xl {
+    // For resolutions upper than 1440px
+    @media screen and (min-width: $container-xl) {
+      @content;
+    }
+  } @else if $device == l {
+    // For resolutions between 1140px and 1440px
+    @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+      @content;
+    }
+  } @else if $device == m {
+    // For resolutions beetwen 960px and 1140px
+    @media screen and (max-width: $container-l) and (min-width: $container-m) {
+      @content;
+    }
+  } @else if $device == s {
+    // For resolutions less than 960px
+    @media screen and (max-width: $container-m) {
+      @content;
+    }
+  } @else if $device == xs {
+    // For resolutions less than 540px
+    @media screen and (max-width: $container-s) {
+      @content;
+    }
+  }
+}
+
+.container {
+  max-width: $container-xl;
+  margin: 0 auto;
+
+  border: 1px solid red;
+
+  @include responsive(s) {
+    flex-direction: column;
+    padding: 32px 18px;
+  }
+}
+
+.cont-ux {
+  max-width: 65%;
+  margin: 0 auto;
+  padding: 0px 20px;
+
+  border: 1px solid green;
+
+  @include responsive(s) {
+    flex-direction: column;
+    padding: 32px 18px;
+    max-width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,122 @@
+// Tipografias
+// Raleway
+@mixin typeface-1($size, $device: desktop) {
+  font-family: "Raleway", sans-serif;
+
+  // h1
+  @if $size == h1 and $device == desktop {
+    font-size: 60px;
+    line-height: 125%;
+  } @else if $size == h1 and $device == mobile {
+    font-size: 48px;
+    line-height: 125%;
+  }
+
+  // H2
+  @if $size == h2 and $device == desktop {
+    font-size: 48px;
+    line-height: 120%;
+  } @else if $size == h2 and $device == mobile {
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  // H3
+  @else if $size == h3 and $device == desktop {
+    font-size: 24px;
+    line-height: 100%;
+  } @else if $size == h3 and $device == mobile {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  // H4
+  @else if $size == h4 and $device == desktop {
+    font-size: 28px;
+    line-height: 100%;
+  } @else if $size == h4 and $device == mobile {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  // p
+  @else if $size == p and $device == desktop {
+    font-size: 18px;
+    line-height: 100%;
+  } @else if $size == p and $device == mobile {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  // a
+  @else if $size == a1 and $device == desktop {
+    font-size: 20px;
+    line-height: 100%;
+  } @else if $size == a1 and $device == mobile {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 700;
+  color: $black-dark;
+  text-align: center;
+  @include typeface-1(h1, desktop);
+  @include responsive(s) {
+    @include typeface-1(h1, mobile);
+  }
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 700;
+  color: $black-dark;
+  text-align: center;
+  position: relative;
+
+  margin: 80px 0 40px 0;
+  @include typeface-1(h2, desktop);
+  @include responsive(s) {
+    @include typeface-1(h2, mobile);
+  }
+  &:before {
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: $black-dark;
+    position: absolute;
+    left: 50%;
+    top: -1rem;
+    transform: translateX(-50%);
+  }
+}
+
+h3 {
+  font-style: italic;
+  font-weight: 700;
+  color: #b8967e;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  @include typeface-1(h3, desktop);
+  @include responsive(s) {
+    @include typeface-1(h3, mobile);
+  }
+}
+
+p {
+  color: $black-dark;
+  text-align: center;
+  @include typeface-1(p, desktop);
+  @include responsive(s) {
+    @include typeface-1(p, mobile);
+  }
+}
+
+a {
+  @include typeface-1(a1, desktop);
+  @include responsive(s) {
+    @include typeface-1(a1, mobile);
+  }
+}
