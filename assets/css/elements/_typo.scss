@@ -1,7 +1,7 @@
 // Tipografias
-// Raleway
+// Montserrat
 @mixin typeface-1($size, $device: desktop) {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   // h1
   @if $size == h1 and $device == desktop {
@@ -10,15 +10,6 @@
   } @else if $size == h1 and $device == mobile {
     font-size: 48px;
     line-height: 125%;
-  }
-
-  // H2
-  @if $size == h2 and $device == desktop {
-    font-size: 48px;
-    line-height: 120%;
-  } @else if $size == h2 and $device == mobile {
-    font-size: 40px;
-    line-height: 120%;
   }
 
   // H3
@@ -58,6 +49,19 @@
   }
 }
 
+@mixin typeface-2($size, $device: desktop) {
+  font-family: "Rustico", serif;
+
+  // H2
+  @if $size == h2 and $device == desktop {
+    font-size: 100px;
+    line-height: 120%;
+  } @else if $size == h2 and $device == mobile {
+    font-size: 60px;
+    line-height: 120%;
+  }
+}
+
 h1 {
   font-style: italic;
   font-weight: 700;
@@ -70,27 +74,27 @@ h1 {
 }
 
 h2 {
-  font-style: italic;
   font-weight: 700;
-  color: $black-dark;
-  text-align: center;
+  color: #ffffff !important;
+  margin-bottom: 20px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  z-index: 100;
   position: relative;
-
-  margin: 80px 0 40px 0;
-  @include typeface-1(h2, desktop);
+  @include typeface-2(h2, desktop);
   @include responsive(s) {
-    @include typeface-1(h2, mobile);
+    @include typeface-2(h2, mobile);
   }
-  &:before {
-    content: "";
-    width: 150px;
-    height: 2px;
-    background-color: $black-dark;
-    position: absolute;
-    left: 50%;
-    top: -1rem;
-    transform: translateX(-50%);
-  }
+}
+
+span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: $black-dark;
+  left: 60px;
+  top: -10px;
+  z-index: 10;
+  position: absolute;
 }
 
 h3 {
@@ -107,7 +111,7 @@ h3 {
 
 p {
   color: $black-dark;
-  text-align: center;
+  line-height: 140%;
   @include typeface-1(p, desktop);
   @include responsive(s) {
     @include typeface-1(p, mobile);

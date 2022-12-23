@@ -1,0 +1,14 @@
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  text-transform: uppercase;
+  padding: 40px 0;
+  ul {
+    gap: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
