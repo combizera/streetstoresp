@@ -1,0 +1,23 @@
+footer {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0;
+  .footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    img {
+      max-width: 50px;
+    }
+  }
+  a {
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

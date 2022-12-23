@@ -49,6 +49,25 @@ ul {
   display: flex;
 }
 
+.btn {
+  padding: 20px;
+  background-color: #222;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.btn img {
+  margin-left: 20px;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
 h1 {
   font-style: italic;
   font-weight: 700;
@@ -69,7 +88,7 @@ h1 {
 h2 {
   font-weight: 700;
   color: #ffffff !important;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   -webkit-margin-before: 0em;
           margin-block-start: 0em;
   -webkit-margin-after: 0em;
@@ -99,29 +118,44 @@ span {
 }
 
 h3 {
-  font-style: italic;
   font-weight: 700;
-  color: #b8967e;
-  margin-bottom: 0.5rem;
+  color: #222;
+  margin-bottom: 1rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 100%;
 }
 @media screen and (max-width: 960px) {
   h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+
+h4 {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+}
+@media screen and (max-width: 960px) {
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
     line-height: 120%;
   }
 }
 
 p {
   color: #222;
-  line-height: 140%;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 140%;
 }
 @media screen and (max-width: 960px) {
   p {
@@ -159,20 +193,13 @@ header a {
   color: #ffffff;
 }
 
-.quem-somos {
-  margin-top: 120px;
-  padding: 0 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .hero {
   background-image: url("./../img/bg-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 18px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,5 +209,76 @@ header a {
   transition: 0.3s ease;
 }
 .hero a:hover {
+  opacity: 0.6;
+}
+
+.logo {
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+
+.quem-somos {
+  margin-top: 120px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.sobre {
+  margin-top: 120px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.numeros {
+  margin-top: 120px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.num-card {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.ajude {
+  margin-top: 120px;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ajude ul {
+  list-style: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0;
+}
+footer .footer-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+footer .footer-nav img {
+  max-width: 50px;
+}
+footer a {
+  transition: 0.3s ease;
+}
+footer a:hover {
   opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */
