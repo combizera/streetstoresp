@@ -1,0 +1,24 @@
+.galeria {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include responsive(s) {
+    display: none;
+  }
+}

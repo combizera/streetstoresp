@@ -84,6 +84,7 @@ h2 {
   @include typeface-2(h2, desktop);
   @include responsive(s) {
     @include typeface-2(h2, mobile);
+    margin-bottom: 4rem;
   }
 }
 
