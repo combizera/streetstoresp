@@ -200,15 +200,111 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
+header .header-logo {
+  display: none;
+}
 @media screen and (max-width: 960px) {
   header {
-    display: none;
+    justify-content: space-around;
+    background-color: #222;
+    padding: 10px 0;
+  }
+  header #btn-mobile {
+    display: flex;
+  }
+  header #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    right: 0;
+    background: #222;
+    z-index: 1000;
+    transition: 0.6s;
+    text-align: right;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  header .header-nav.active #menu {
+    height: calc(100vh - 60px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  header #menu a {
+    padding: 1rem 0;
+    display: block;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  header .header-logo {
+    display: block;
+  }
+  header .header-logo img {
+    max-width: 80px;
   }
 }
 
 .active-header {
   background-color: rgba(34, 34, 34, 0.75);
-  box-shadow: 0px 51px 80px rgba(169, 80, 196, 0.08), 0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271), 0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04), 0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
+}
+@media screen and (max-width: 960px) {
+  .active-header {
+    background-color: #222;
+  }
+}
+
+#btn-mobile {
+  display: none;
+  background: #222;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+  gap: 0.5rem;
+}
+#btn-mobile span {
+  color: #fff;
+  right: 0px;
+  top: 50%;
+  transform: translate(50%);
+  position: unset;
+}
+
+#hamburguer {
+  width: 20px;
+  border-top: 2px solid;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.header-nav.active #hamburguer {
+  border-top-color: transparent;
+}
+
+.header-nav.active #hamburguer::before {
+  transform: rotate(135deg);
+}
+
+.header-nav.active #hamburguer::after {
+  transform: rotate(-135deg);
+  top: -7px;
 }
 
 .hero {

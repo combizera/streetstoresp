@@ -26,8 +26,12 @@
 
 <body>
   <header id="header">
-    <nav>
-      <ul>
+    <div class="header-logo"><a href="#"><img src="./assets/img/logo.svg" alt="Logotipo StreetStore"></a></div>
+    <nav class="header-nav" data-menu="list" role="menu">
+      <button id="btn-mobile" data-menu="button" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">Menu
+        <span id="hamburguer"></span>
+      </button>
+      <ul id="menu">
         <li><a href="#quem-somos">Quem somos</a></li>
         <li><a href="#sobre">O que fazemos</a></li>
         <li><a href="#ajude">Faça parte</a></li>
