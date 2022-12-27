@@ -116,7 +116,7 @@ span {
   font-size: 3rem;
   color: #222;
   left: 60px;
-  top: -10px;
+  top: 1rem;
   z-index: 10;
   position: absolute;
 }
@@ -215,9 +215,9 @@ header .header-logo {
 }
 @media screen and (max-width: 960px) {
   header {
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #222;
-    padding: 10px 0;
+    padding: 10px 20px;
   }
   header #btn-mobile {
     display: flex;

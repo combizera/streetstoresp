@@ -26,9 +26,9 @@ header {
   }
 
   @include responsive(s) {
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #222;
-    padding: 10px 0;
+    padding: 10px 20px;
 
     #btn-mobile {
       display: flex;
