@@ -57,7 +57,7 @@
     font-size: 100px;
     line-height: 120%;
   } @else if $size == h2 and $device == mobile {
-    font-size: 60px;
+    font-size: 80px;
     line-height: 120%;
   }
 }
@@ -84,18 +84,25 @@ h2 {
   @include typeface-2(h2, desktop);
   @include responsive(s) {
     @include typeface-2(h2, mobile);
-    margin-bottom: 4rem;
+    text-align: center;
+    margin-bottom: 0rem;
   }
 }
 
 span {
   font-family: "Montserrat", sans-serif;
+  line-height: 100%;
   font-size: 3rem;
   color: $black-dark;
   left: 60px;
   top: -10px;
   z-index: 10;
   position: absolute;
+  @include responsive(s) {
+    left: 0;
+    top: 50%;
+    transform: translateY(-80%);
+  }
 }
 
 h3 {

@@ -36,10 +36,12 @@ header {
 
     #menu {
       display: block;
+
       position: absolute;
       width: 100%;
       height: 0;
       right: 0;
+      top: 70px;
       background: #222;
       z-index: 1000;
       transition: 0.6s;
@@ -56,7 +58,7 @@ header {
     }
 
     #menu a {
-      padding: 1rem 0;
+      padding: 1rem 20px;
       display: block;
       margin: 0 1rem;
       border-bottom: 2px solid rgba(0, 0, 0, 0.05);
@@ -87,7 +89,6 @@ header {
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: bold;
   color: #fff;
   cursor: pointer;
   align-items: center;

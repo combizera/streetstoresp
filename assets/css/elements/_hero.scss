@@ -28,3 +28,11 @@
   margin-bottom: 20px;
   max-width: 200px;
 }
+
+.sec-txt {
+  @include responsive(s) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
