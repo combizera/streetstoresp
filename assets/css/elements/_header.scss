@@ -1,6 +1,6 @@
-header {
+.header {
   position: fixed;
-  top: 0;
+  top: var(--wp-admin--admin-bar--height, 0px);
 
   display: flex;
   align-items: center;
@@ -10,8 +10,10 @@ header {
   padding: 40px 0;
   width: 100%;
   z-index: 1000;
+
   ul {
     gap: 40px;
+    display: flex;
   }
   a {
     text-decoration: none;
@@ -112,7 +114,7 @@ header {
 
 #hamburguer::after,
 #hamburguer::before {
-  content: "";
+  content: '';
   display: block;
   width: 20px;
   height: 2px;

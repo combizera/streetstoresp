@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("./../img/bg-hero.png");
+  background-image: url('./../img/bg-hero.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,6 +17,10 @@
     &:hover {
       opacity: 0.6;
     }
+  }
+
+  .hero-nav > ul {
+    display: flex;
   }
 
   @include responsive(s) {

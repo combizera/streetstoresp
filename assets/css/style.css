@@ -10,14 +10,11 @@ html {
 
 @font-face {
   font-family: Rustica;
-  src: url("./../../rustico.otf");
+  src: url("../fonts/rustico.otf");
 }
 body {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Montserrat", sans-serif;
   color: #555;
   font-size: 1.125rem;
@@ -46,7 +43,6 @@ img {
 
 ul {
   list-style: none;
-  display: flex;
 }
 
 .btn {
@@ -110,7 +106,7 @@ h2 {
   }
 }
 
-span {
+.old-span {
   font-family: "Montserrat", sans-serif;
   line-height: 100%;
   font-size: 3rem;
@@ -121,7 +117,7 @@ span {
   position: absolute;
 }
 @media screen and (max-width: 960px) {
-  span {
+  .old-span {
     left: 0;
     top: 50%;
     transform: translateY(-80%);
@@ -189,9 +185,9 @@ a {
   }
 }
 
-header {
+.header {
   position: fixed;
-  top: 0;
+  top: var(--wp-admin--admin-bar--height, 0px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,29 +196,30 @@ header {
   width: 100%;
   z-index: 1000;
 }
-header ul {
+.header ul {
   gap: 40px;
+  display: flex;
 }
-header a {
+.header a {
   text-decoration: none;
   color: #ffffff;
 }
-header a:hover {
+.header a:hover {
   text-decoration: underline;
 }
-header .header-logo {
+.header .header-logo {
   display: none;
 }
 @media screen and (max-width: 960px) {
-  header {
+  .header {
     justify-content: space-between;
     background-color: #222;
     padding: 10px 20px;
   }
-  header #btn-mobile {
+  .header #btn-mobile {
     display: flex;
   }
-  header #menu {
+  .header #menu {
     display: block;
     position: absolute;
     width: 100%;
@@ -236,21 +233,21 @@ header .header-logo {
     visibility: hidden;
     overflow-y: hidden;
   }
-  header .header-nav.active #menu {
+  .header .header-nav.active #menu {
     height: calc(100vh - 60px);
     visibility: visible;
     overflow-y: auto;
   }
-  header #menu a {
+  .header #menu a {
     padding: 1rem 20px;
     display: block;
     margin: 0 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
   }
-  header .header-logo {
+  .header .header-logo {
     display: block;
   }
-  header .header-logo img {
+  .header .header-logo img {
     max-width: 80px;
   }
 }
@@ -334,6 +331,9 @@ header .header-logo {
 }
 .hero a:hover {
   opacity: 0.6;
+}
+.hero .hero-nav > ul {
+  display: flex;
 }
 @media screen and (max-width: 960px) {
   .hero {
@@ -499,6 +499,9 @@ footer .footer-logo {
 }
 footer .footer-nav img {
   max-width: 50px;
+}
+footer .footer-nav > ul {
+  display: flex;
 }
 footer a {
   transition: 0.3s ease;

@@ -14,6 +14,9 @@ footer {
     img {
       max-width: 50px;
     }
+    > ul {
+      display: flex;
+    }
   }
   a {
     transition: 0.3s ease;
