@@ -1,7 +1,7 @@
 // Tipografias
 // Montserrat
 @mixin typeface-1($size, $device: desktop) {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   // h1
   @if $size == h1 and $device == desktop {
@@ -50,7 +50,7 @@
 }
 
 @mixin typeface-2($size, $device: desktop) {
-  font-family: "Rustico", serif;
+  font-family: 'Rustico', serif;
 
   // H2
   @if $size == h2 and $device == desktop {
@@ -79,8 +79,7 @@ h2 {
   padding-bottom: 20px;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  z-index: 100;
-  position: relative;
+
   @include typeface-2(h2, desktop);
   @include responsive(s) {
     @include typeface-2(h2, mobile);
@@ -90,7 +89,7 @@ h2 {
 }
 
 .old-span {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 100%;
   font-size: 3rem;
   color: $black-dark;
