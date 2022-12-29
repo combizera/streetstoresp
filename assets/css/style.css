@@ -9,7 +9,7 @@ html {
 }
 
 @font-face {
-  font-family: Rustica;
+  font-family: Rustico;
   src: url("../fonts/rustico.otf");
 }
 body {
@@ -84,7 +84,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
   padding-bottom: 20px;
   -webkit-margin-before: 0em;
           margin-block-start: 0em;
@@ -315,7 +315,7 @@ a {
 }
 
 .hero {
-  background: url("./../img/bg-hero.png") no-repeat center 20%;
+  background: url("./../img/bg-hero.jpg") no-repeat center 20%;
   background-size: cover;
   min-height: 33rem;
   height: 100vh;
@@ -365,6 +365,22 @@ a {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
+}
+.quem-somos h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #222222;
+  text-transform: capitalize;
+}
+.quem-somos h2 span {
+  font-family: "Rustico", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: -1.125rem;
 }
 
 .sobre {

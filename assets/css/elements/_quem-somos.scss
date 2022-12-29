@@ -4,8 +4,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+
   @include responsive(s) {
     grid-template-columns: 1fr;
     padding: 0 20px;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #222222;
+    text-transform: capitalize;
+
+    span {
+      font-family: 'Rustico', sans-serif;
+      font-weight: 400;
+      font-size: 4rem;
+      color: #fff;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: -1.125rem;
+    }
   }
 }
