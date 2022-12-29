@@ -33,7 +33,8 @@ get_header();
       </div>
     </section>
 
-    <section id="quem-somos" class="quem-somos container">
+    <span id="quem-somos" style="padding-top: 4rem; margin-top: -4rem; display: block;"></span>
+    <section class="quem-somos container">
       <div class="sec-txt">
         <h2>
           <span>Street Store</span>
