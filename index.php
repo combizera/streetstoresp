@@ -35,22 +35,20 @@ get_header();
 
     <section id="quem-somos" class="quem-somos container">
       <div class="sec-txt">
-        <h2>Street Store <span>Quem somos</span></h2>
-        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.
-          <br><br>
-        <p>Mais de 20 mil pessoas já foram atendidas desde 2015.
-          Mais de 25 toneladas de doações foram distribuídas.
-          700 voluntários já atuaram no trabalho voluntário.
-          Mais de 80 parceiros do setor privado já colaboraram nas edições do projeto.</p>
-        </p>
+        <h2>
+        <span>Street Store</span>
+          Quem somos
+        </h2>
+        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.</p>
+        <p>Mais de 20 mil pessoas já foram atendidas desde 2015. Mais de 25 toneladas de doações foram distribuídas. 700 voluntários já atuaram no trabalho voluntário. Mais de 80 parceiros do setor privado já colaboraram nas edições do projeto.</p>
         <a target="_blank" href="#" class="btn">Veja o vídeo <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play"></a>
       </div>
-      <div class="sec-img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt="StreetStore - Foto de uma ação voluntária que realizamos"></div>
+      <div class="sec-img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos"></div>
     </section>
 
     <section id="sobre" class="sobre container">
       <div class="sec-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt="StreetStore - Foto de uma ação voluntária que realizamos">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos">
       </div>
       <div class="sec-txt">
         <h2>Sobre nos<span>O que fazemos</span></h2>
@@ -82,12 +80,12 @@ get_header();
     <section class="galeria container">
       <h2>Algumas fotos <span>Galeria</span></h2>
       <ul class="galeria-fts">
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.png" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
       </ul>
     </section>
 
