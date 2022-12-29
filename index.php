@@ -58,16 +58,18 @@ get_header();
 
     <section id="sobre" class="sobre container">
       <div class="sec-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
       </div>
       <div class="sec-txt">
-        <h2>Sobre nos<span>O que fazemos</span></h2>
-        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.
-          <br><br>
-          Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.
-          <br><br>
-          Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.
-        </p>
+        <h2>
+          <span>Sobre nos</span>
+          O que fazemos
+        </h2>
+        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.</p>
+        <p>Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.</p>
+        <p>Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.</p>
         <a target="_blank" href="#" class="btn">Veja o vídeo <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play"></a>
       </div>
     </section>

@@ -1,12 +1,22 @@
 .sobre {
-  margin-top: 120px;
-  padding: 0 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  @extend %section;
+  grid-template-columns: 1fr 0.8fr;
 
-  @include responsive(s) {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+  h2 {
+    @extend %section-title;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1rem;
+
+    span {
+      margin: 0;
+      width: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      text-align: center;
+    }
   }
 }
