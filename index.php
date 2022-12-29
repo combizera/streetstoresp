@@ -102,7 +102,10 @@ get_header();
     </section>
 
     <section id="ajude" class="ajude container">
-      <h2>Texto legal<span>Faça sua parte</span></h2>
+      <h2>
+        <span>Texto legal</span>
+        Faça sua parte
+      </h2>
       <h3>São diversas formas que você pode ajudar</h3>
       <ul>
         <li>Se você é empresário(a) fornecendo algum serviço no dia do evento;</li>

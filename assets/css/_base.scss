@@ -117,6 +117,9 @@ ul {
   font-size: 3.75rem;
   font-weight: 700;
   color: #222222;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
 
   span {
     font-family: 'Rustico', sans-serif;
@@ -127,6 +130,17 @@ ul {
     display: block;
     margin-bottom: -1rem;
   }
+}
+
+%section-background-title {
+  margin: 0;
+  width: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
 }
 
 %section {
