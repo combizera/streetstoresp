@@ -106,6 +106,7 @@ ul {
   .sobre, .quem-somos {
     grid-template-columns: 1fr;
     padding: 0 1.25rem;
+    row-gap: 2rem;
   }
 }
 .sobre .sec-txt p, .quem-somos .sec-txt p {
@@ -438,22 +439,44 @@ a {
 .sobre {
   grid-template-columns: 1fr 0.8fr;
 }
+@media screen and (max-width: 960px) {
+  .sobre {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .sobre .sec-img {
+    grid-row: 3/4;
+  }
+}
+
 .numeros {
-  margin-top: 120px;
-  padding: 0 60px;
+  margin-top: 7.5rem;
+  padding: 0 3.75rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 1.25rem;
 }
 @media screen and (max-width: 960px) {
   .numeros {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 1.25rem;
+    justify-items: center;
   }
+}
+.numeros > h2 {
+  text-align: center;
+  grid-column: 1/-1;
+  font-size: 3.75rem;
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
 }
 
 .num-card {
-  padding: 20px;
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.25rem;
   background-color: #fff;
 }
 

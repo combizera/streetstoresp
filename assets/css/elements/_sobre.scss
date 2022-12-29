@@ -2,11 +2,22 @@
   @extend %section;
   grid-template-columns: 1fr 0.8fr;
 
+  @include responsive(s) {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem;
+  }
+
   h2 {
     @extend %section-title;
 
     span {
       @extend %section-background-title;
+    }
+  }
+
+  .sec-img {
+    @include responsive(s) {
+      grid-row: 3 / 4;
     }
   }
 }

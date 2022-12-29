@@ -153,6 +153,7 @@ ul {
   @include responsive(s) {
     grid-template-columns: 1fr;
     padding: 0 1.25rem;
+    row-gap: 2rem;
   }
 
   .sec-txt {

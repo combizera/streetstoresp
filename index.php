@@ -75,6 +75,7 @@ get_header();
     </section>
 
     <section id="numeros" class="container numeros">
+      <h2>Números</h2>
       <div class="num-card">
         <h4>+10</h4>
         <h3>lojas espalhadas pelo mundo</h3>
