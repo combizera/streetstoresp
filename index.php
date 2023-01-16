@@ -33,7 +33,7 @@ get_header();
       </div>
     </section>
 
-    <span id="quem-somos" style="padding-top: 4rem; margin-top: -4rem; display: block;"></span>
+    <span id="quem-somos" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
     <section class="quem-somos container">
       <div class="sec-txt">
         <h2>
@@ -56,7 +56,8 @@ get_header();
       </div>
     </section>
 
-    <section id="sobre" class="sobre container">
+    <span id="sobre" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
+    <section class="sobre container">
       <div class="sec-img">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
@@ -105,7 +106,8 @@ get_header();
       </ul>
     </section>
 
-    <section id="ajude" class="ajude container">
+    <span id="ajude" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
+    <section class="ajude container">
       <h2>
         <span>Texto legal</span>
         Faça sua parte
@@ -123,8 +125,8 @@ get_header();
       <a target="_blank" href="#" class="btn">Entre no grupo do Whatsapp</a>
     </section>
 
-
-    <section id="parceiros" class="parceiros container">
+    <span id="parceiros" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <section class="parceiros container">
       <h4>Parceiros</h4>
       <div class="marcas">
         <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
@@ -138,7 +140,8 @@ get_header();
       </div>
     </section>
 
-    <section id="patrocinadores" class="patrocinadores container">
+    <span id="patrocinadores" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <section class="patrocinadores container">
       <h4>Patrocinadores</h4>
       <div class="marcas">
         <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
@@ -148,7 +151,8 @@ get_header();
       </div>
     </section>
 
-    <section id="apoiadores" class="apoiadores container">
+    <span id="apoiadores" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <section class="apoiadores container">
       <h4>Apoiadores</h4>
       <div class="marcas">
         <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
