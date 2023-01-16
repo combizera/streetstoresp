@@ -46,7 +46,7 @@ ul {
 }
 
 .btn {
-  padding: 20px;
+  padding: 1rem 1.5rem;
   margin-top: 40px;
   background-color: #222;
   color: #fff;
@@ -65,7 +65,7 @@ ul {
   opacity: 0.7;
 }
 
-.ajude h2, .sobre h2, .quem-somos h2 {
+.ajude h2, .galeria h2, .sobre h2, .quem-somos h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 3.75rem;
   font-weight: 700;
@@ -74,7 +74,7 @@ ul {
   z-index: 2;
   margin-bottom: 1rem;
 }
-.ajude h2 span, .sobre h2 span, .quem-somos h2 span {
+.ajude h2 span, .galeria h2 span, .sobre h2 span, .quem-somos h2 span {
   font-family: "Rustico", sans-serif;
   font-weight: 400;
   font-size: 4.5rem;
@@ -84,7 +84,7 @@ ul {
   margin-bottom: -1rem;
 }
 
-.ajude h2 span, .sobre h2 span {
+.ajude h2 span, .galeria h2 span, .sobre h2 span {
   margin: 0;
   width: 50%;
   position: absolute;
@@ -476,8 +476,13 @@ a {
 .num-card {
   width: 100%;
   max-width: 30rem;
-  padding: 1.25rem;
+  padding: 2.5rem 1.5rem;
   background-color: #fff;
+  border-radius: 1.25rem;
+}
+.num-card p {
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 .galeria {
@@ -488,6 +493,13 @@ a {
   justify-content: center;
   flex-direction: column;
   padding: 0 60px;
+  position: relative;
+}
+.galeria h2 {
+  margin-bottom: 2rem;
+}
+.galeria h2 span {
+  width: auto;
 }
 .galeria span {
   left: 50%;
@@ -518,15 +530,22 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.ajude ul {
-  list-style: none;
+.ajude h2 {
+  margin-bottom: 2rem;
+}
+.ajude__content h3 {
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+.ajude__content ul {
+  list-style: disc;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
 }
 @media screen and (max-width: 960px) {
-  .ajude ul {
+  .ajude__content ul {
     align-items: flex-start;
   }
 }

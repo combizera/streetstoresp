@@ -78,20 +78,23 @@ get_header();
       <h2>Números</h2>
       <div class="num-card">
         <h4>+10</h4>
-        <h3>lojas espalhadas pelo mundo</h3>
+        <p>lojas espalhadas pelo mundo</p>
       </div>
       <div class="num-card">
         <h4>+10</h4>
-        <h3>lojas espalhadas pelo mundo</h3>
+        <p>lojas espalhadas pelo mundo</p>
       </div>
       <div class="num-card">
         <h4>+10</h4>
-        <h3>lojas espalhadas pelo mundo</h3>
+        <p>lojas espalhadas pelo mundo</p>
       </div>
     </section>
 
     <section class="galeria container">
-      <h2>Algumas fotos <span>Galeria</span></h2>
+      <h2>
+        <span>Algumas fotos</span>
+        Galeria
+      </h2>
       <ul class="galeria-fts">
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
@@ -107,14 +110,16 @@ get_header();
         <span>Texto legal</span>
         Faça sua parte
       </h2>
-      <h3>São diversas formas que você pode ajudar</h3>
-      <ul>
-        <li>Se você é empresário(a) fornecendo algum serviço no dia do evento;</li>
-        <li>Contribuição financeira;</li>
-        <li>Sendo voluntario no projeto</li>
-        <li>Compartilhando e divulgando o projeto;</li>
-        <li>Com a doação de roupas e sapatos nos pontos de coleta</li>
-      </ul>
+      <article class="ajude__content">
+        <h3>São diversas formas que você pode ajudar</h3>
+        <ul>
+          <li>Se você é empresário(a) fornecendo algum serviço no dia do evento;</li>
+          <li>Contribuição financeira;</li>
+          <li>Sendo voluntario no projeto</li>
+          <li>Compartilhando e divulgando o projeto;</li>
+          <li>Com a doação de roupas e sapatos nos pontos de coleta</li>
+        </ul>
+      </article>
       <a target="_blank" href="#" class="btn">Entre no grupo do Whatsapp</a>
     </section>
 

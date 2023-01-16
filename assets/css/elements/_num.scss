@@ -23,6 +23,12 @@
 .num-card {
   width: 100%;
   max-width: 30rem;
-  padding: 1.25rem;
+  padding: 2.5rem 1.5rem;
   background-color: #fff;
+  border-radius: 1.25rem;
+
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
 }
