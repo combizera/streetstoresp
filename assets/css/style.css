@@ -25,10 +25,10 @@ body {
   max-width: 1440px;
   width: 95%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 @media screen and (max-width: 960px) {
   .container {
+    width: 90%;
     flex-direction: column;
     padding: 32px 0px;
   }
@@ -141,6 +141,7 @@ ul {
     grid-template-columns: 1fr;
     padding: 0;
     row-gap: 2rem;
+    padding: 0;
   }
 }
 .sobre .sec-txt p, .quem-somos .sec-txt p {
@@ -184,6 +185,23 @@ ul {
 .sobre .sec-img :last-child, .quem-somos .sec-img :last-child {
   grid-column: 2/3;
   grid-row: 2/4;
+}
+@media screen and (max-width: 960px) {
+  .sobre .sec-img, .quem-somos .sec-img {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .sobre .sec-img :first-child, .quem-somos .sec-img :first-child,
+.sobre .sec-img :nth-child(2),
+.quem-somos .sec-img :nth-child(2),
+.sobre .sec-img :last-child,
+.quem-somos .sec-img :last-child {
+    grid-column: 1/-1;
+    display: none;
+  }
+  .sobre .sec-img :first-child, .quem-somos .sec-img :first-child {
+    display: block;
+  }
 }
 
 h1 {
@@ -489,7 +507,6 @@ a {
 @media screen and (max-width: 960px) {
   .sobre {
     grid-template-columns: 1fr;
-    padding: 0 1.25rem;
   }
 }
 @media screen and (max-width: 960px) {
@@ -569,11 +586,6 @@ a {
 .galeria ul img {
   max-width: 100%;
 }
-@media screen and (max-width: 960px) {
-  .galeria {
-    padding: 0 20px;
-  }
-}
 
 .ajude {
   display: flex;
@@ -610,7 +622,7 @@ a {
   .parceiros,
 .patrocinadores,
 .apoiadores {
-    padding: 0px 20px;
+    padding: 0;
   }
   .parceiros h4,
 .patrocinadores h4,
