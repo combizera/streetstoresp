@@ -28,6 +28,12 @@ function btnHamburguer() {
 
   btnMobile.addEventListener('click', toggleMenu);
   btnMobile.addEventListener('touchstart', toggleMenu);
+
+  const links = document.querySelectorAll('#menu a');
+
+  links.forEach(function (link) {
+    link.addEventListener('click', toggleMenu);
+  })
 }
 
 btnHamburguer();
