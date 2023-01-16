@@ -2,15 +2,16 @@
   background: url('./../img/bg-hero.jpg') no-repeat center 20%;
   background-size: cover;
 
-  min-height: 33rem;
+  min-height: 35rem;
   height: 100vh;
-  width: calc(100vw - 18px);
+  width: 100%;
   margin-bottom: 7.5rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.75rem;
 
   a {
     transition: 0.3s ease;
@@ -23,8 +24,17 @@
     display: flex;
   }
 
+  .hero-logo {
+    width: 90%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
   @include responsive(s) {
-    display: none;
+    padding-top: 3rem;
   }
 }
 

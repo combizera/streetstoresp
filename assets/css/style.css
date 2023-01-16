@@ -23,6 +23,7 @@ body {
 
 .container {
   max-width: 1440px;
+  width: 95%;
   margin: 0 auto;
   border: 1px solid red;
 }
@@ -73,6 +74,7 @@ ul {
   position: relative;
   z-index: 2;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .ajude h2 span, .galeria h2 span, .sobre h2 span, .quem-somos h2 span {
   font-family: "Rustico", sans-serif;
@@ -83,10 +85,42 @@ ul {
   display: block;
   margin-bottom: -1rem;
 }
+@media screen and (max-width: 1140px) and (min-width: 960px) {
+  .ajude h2 span, .galeria h2 span, .sobre h2 span, .quem-somos h2 span {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .ajude h2 span, .galeria h2 span, .sobre h2 span, .quem-somos h2 span {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ajude h2 span, .galeria h2 span, .sobre h2 span, .quem-somos h2 span {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1140px) and (min-width: 960px) {
+  .ajude h2, .galeria h2, .sobre h2, .quem-somos h2 {
+    font-size: 3.25rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .ajude h2, .galeria h2, .sobre h2, .quem-somos h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ajude h2, .galeria h2, .sobre h2, .quem-somos h2 {
+    font-size: 2.5rem;
+  }
+}
 
 .ajude h2 span, .galeria h2 span, .sobre h2 span {
   margin: 0;
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -105,7 +139,7 @@ ul {
 @media screen and (max-width: 960px) {
   .sobre, .quem-somos {
     grid-template-columns: 1fr;
-    padding: 0 1.25rem;
+    padding: 0;
     row-gap: 2rem;
   }
 }
@@ -113,6 +147,11 @@ ul {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+@media screen and (max-width: 960px) {
+  .sobre .sec-txt p, .quem-somos .sec-txt p {
+    font-size: 1rem;
+  }
 }
 .sobre .sec-txt p a, .quem-somos .sec-txt p a {
   color: inherit;
@@ -399,14 +438,15 @@ a {
 .hero {
   background: url("./../img/bg-hero.jpg") no-repeat center 20%;
   background-size: cover;
-  min-height: 33rem;
+  min-height: 35rem;
   height: 100vh;
-  width: calc(100vw - 18px);
+  width: 100%;
   margin-bottom: 7.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.75rem;
 }
 .hero a {
   transition: 0.3s ease;
@@ -417,9 +457,16 @@ a {
 .hero .hero-nav > ul {
   display: flex;
 }
+.hero .hero-logo {
+  width: 90%;
+}
+.hero .hero-logo img {
+  display: block;
+  width: 100%;
+}
 @media screen and (max-width: 960px) {
   .hero {
-    display: none;
+    padding-top: 3rem;
   }
 }
 
@@ -472,6 +519,11 @@ a {
   font-family: "Montserrat", sans-serif;
   color: #222222;
 }
+@media screen and (max-width: 960px) {
+  .numeros > h2 {
+    font-size: 3rem;
+  }
+}
 
 .num-card {
   width: 100%;
@@ -492,7 +544,6 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 60px;
   position: relative;
 }
 .galeria h2 {
@@ -525,7 +576,6 @@ a {
 }
 
 .ajude {
-  padding: 0 3.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,6 +612,11 @@ a {
 .apoiadores {
     padding: 0px 20px;
   }
+  .parceiros h4,
+.patrocinadores h4,
+.apoiadores h4 {
+    font-size: min(2.5rem, 10vw);
+  }
 }
 
 .marcas {
@@ -573,6 +628,7 @@ a {
 @media screen and (max-width: 960px) {
   .marcas {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem;
   }
 }
 

@@ -17,6 +17,10 @@
     font-size: 3.75rem;
     font-family: 'Montserrat', sans-serif;
     color: #222222;
+
+    @include responsive(s) {
+      font-size: 3rem;
+    }
   }
 }
 

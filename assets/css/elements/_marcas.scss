@@ -6,6 +6,10 @@
 
   @include responsive(s) {
     padding: 0px 20px;
+
+    h4 {
+      font-size: min(2.5rem, 10vw);
+    }
   }
 }
 
@@ -16,6 +20,7 @@
   margin-top: 5rem;
   @include responsive(s) {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem;
   }
 }
 

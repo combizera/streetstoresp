@@ -68,6 +68,7 @@ body {
 
 .container {
   max-width: $container-xl;
+  width: 95%;
   margin: 0 auto;
 
   border: 1px solid red;
@@ -120,6 +121,7 @@ ul {
   position: relative;
   z-index: 2;
   margin-bottom: 1rem;
+  text-align: center;
 
   span {
     font-family: 'Rustico', sans-serif;
@@ -129,12 +131,32 @@ ul {
     text-transform: uppercase;
     display: block;
     margin-bottom: -1rem;
+
+    @include responsive(m) {
+      font-size: 3.75rem;
+    }
+    @include responsive(s) {
+      font-size: 3.5rem;
+    }
+    @include responsive(xs) {
+      font-size: 3rem;
+    }
+  }
+
+  @include responsive(m) {
+    font-size: 3.25rem;
+  }
+  @include responsive(s) {
+    font-size: 3rem;
+  }
+  @include responsive(xs) {
+    font-size: 2.5rem;
   }
 }
 
 %section-background-title {
   margin: 0;
-  width: 50%;
+  width: fit-content;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -152,7 +174,7 @@ ul {
 
   @include responsive(s) {
     grid-template-columns: 1fr;
-    padding: 0 1.25rem;
+    padding: 0;
     row-gap: 2rem;
   }
 
@@ -161,6 +183,10 @@ ul {
       margin-bottom: 1rem;
       font-size: 1.125rem;
       line-height: 1.75rem;
+
+      @include responsive(s) {
+        font-size: 1rem;
+      }
 
       a {
         color: inherit;
