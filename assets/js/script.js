@@ -31,3 +31,20 @@ function btnHamburguer() {
 }
 
 btnHamburguer();
+
+new Swiper('.galeria', {
+  direction: 'horizontal',
+  grabCursor: true,
+  slidesPerView: 1.1,
+  spaceBetween: 8,
+  breakpoints: {
+    640: {
+      slidesPerView: 3.1,
+      spaceBetween: 8
+    },
+    920: {
+      slidesPerView: 3.5,
+      spaceBetween: 10
+    },
+  },
+});

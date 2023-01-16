@@ -96,13 +96,25 @@ get_header();
         <span>Algumas fotos</span>
         Galeria
       </h2>
-      <ul class="galeria-fts">
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt=""></li>
+      <ul class="galeria-fts swiper-wrapper">
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
+        <li class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
+        </li>
       </ul>
     </section>
 

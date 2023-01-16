@@ -580,6 +580,7 @@ a {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 .galeria h2 {
   margin-bottom: 2rem;
@@ -590,16 +591,6 @@ a {
 .galeria span {
   left: 50%;
   transform: translate(-50%);
-}
-.galeria ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-@media screen and (max-width: 960px) {
-  .galeria ul {
-    grid-template-columns: 1fr;
-  }
 }
 .galeria ul img {
   max-width: 100%;

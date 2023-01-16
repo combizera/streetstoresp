@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 
   h2 {
     @extend %section-title;
@@ -21,13 +22,6 @@
     transform: translate(-50%);
   }
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    @include responsive(s) {
-      grid-template-columns: 1fr;
-    }
     img {
       max-width: 100%;
     }
