@@ -19,6 +19,25 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js', ['swiper-js'], null, true);
 });
 
+function get_property_safe(object|array|bool $obj, string $key) {
+  if (!$obj) {
+    return null;
+  }
+
+  return property_exists((object) $obj, $key) ? $obj[$key] : '';
+}
+function get_image_alt_text($image_id) {
+  $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+  return (bool) $alt_text ? $alt_text : '';
+}
+function get_cmb_field($key, $page_id = 0) {
+  $id = $page_id !== 0 ? $page_id : get_the_ID();
+  return get_post_meta($id, $key, true);
+}
+function the_cmb_field($key, $page_id) {
+  echo get_post_meta($key, $page_id);
+}
+
 const IMAGE_MIME_TYPES = ['image/jpeg', 'image/png', 'image/svg+xml', 'image/webp'];
 
 function cmb2_add_home_boxes() {

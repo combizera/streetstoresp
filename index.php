@@ -8,173 +8,200 @@ get_header();
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo StreetStore SP">
       </div>
       <div class="hero-nav">
+        <?php $redes_sociais = get_field('redes_sociais'); ?>
         <ul>
-          <li>
-            <a target="_blank" href="https://www.facebook.com/sp.streetstore">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-facebook.svg" alt="Ícone do Facebook">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.instagram.com/streetstoresp/">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-instagram.svg" alt="Ícone do Instagram">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="#">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-twitter.svg" alt="Ícone do Twitter">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="#">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-whatsapp.svg" alt="Ícone do Whatsapp">
-            </a>
-          </li>
+          <?php foreach ($redes_sociais as $rede_social => $link): ?>
+            <li>
+              <a target="_blank" href="<?php echo empty($link) ? '#' : $link; ?>">
+                <img
+                  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-<?php echo $rede_social; ?>.svg"
+                  alt="Ícone do <?php echo ucwords($rede_social); ?>"
+                />
+              </a>
+            </li>
+          <?php endforeach; ?>
         </ul>
       </div>
     </section>
 
     <span id="quem-somos" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
+    <?php $quem_somos = get_field('quem_somos'); ?>
     <section class="quem-somos container">
       <div class="sec-txt">
         <h2>
-          <span>Street Store</span>
-          Quem somos
+          <span>
+            <?php echo $quem_somos['titulo_fundo']; ?>
+          </span>
+          <?php echo $quem_somos['titulo']; ?>
         </h2>
-        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.</p>
-        <p>Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.</p>
-        <p>Mais de 20 mil pessoas já foram atendidas desde 2015. Mais de 25 toneladas de doações foram distribuídas. 700 voluntários já atuaram no trabalho voluntário. Mais de 80 parceiros do setor privado já colaboraram nas edições do projeto.</p>
-        <p>Para ONGs e/ou pessoas físicas que pretendem desenvolver o projeto em estados brasileiros ou exterior, entrar em contato com a organização global em:</p>
-        <p>
-          <a href="#">http://www.thestreetstore.org/</a>
-        </p>
-        <a target="_blank" href="#" class="btn">Veja o vídeo <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play"></a>
+        <div class="article-content">
+          <?php echo $quem_somos['texto']; ?>
+        </div>
+        <a
+          target="<?php echo get_property_safe($quem_somos['link'], 'target'); ?>"
+          href="<?php echo get_property_safe($quem_somos['link'], 'url') ?? '#'; ?>"
+          class="btn"
+        >
+          <?php echo get_property_safe($quem_somos['link'], 'title'); ?>
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play">
+        </a>
       </div>
       <div class="sec-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
+        <img
+          src="<?php echo get_property_safe($quem_somos['imagem_1'], 'url'); ?>"
+          alt="<?php echo get_property_safe($quem_somos['imagem_1'], 'alt'); ?>"
+        />
+        <img
+          src="<?php echo get_property_safe($quem_somos['imagem_2'], 'url'); ?>"
+          alt="<?php echo get_property_safe($quem_somos['imagem_2'], 'alt'); ?>"
+        />
+        <img
+          src="<?php echo get_property_safe($quem_somos['imagem_3'], 'url'); ?>"
+          alt="<?php echo get_property_safe($quem_somos['imagem_3'], 'alt'); ?>"
+        />
       </div>
     </section>
 
     <span id="sobre" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
+    <?php $sobre_nos = get_field('sobre_nos'); ?>
     <section class="sobre container">
       <div class="sec-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="StreetStore - Foto de uma ação voluntária que realizamos" />
+      <img
+          src="<?php echo get_property_safe($sobre_nos['imagem_1'], 'url'); ?>"
+          alt="<?php echo get_property_safe($sobre_nos['imagem_1'], 'alt'); ?>"
+        />
+        <img
+          src="<?php echo get_property_safe($sobre_nos['imagem_2'], 'url'); ?>"
+          alt="<?php echo get_property_safe($sobre_nos['imagem_2'], 'alt'); ?>"
+        />
+        <img
+          src="<?php echo get_property_safe($sobre_nos['imagem_3'], 'url'); ?>"
+          alt="<?php echo get_property_safe($sobre_nos['imagem_3'], 'alt'); ?>"
+        />
       </div>
       <div class="sec-txt">
         <h2>
-          <span>Sobre nos</span>
-          O que fazemos
+          <span>
+            <?php echo $sobre_nos['titulo_fundo']; ?>
+          </span>
+          <?php echo $sobre_nos['titulo']; ?>
         </h2>
-        <p>A iniciativa que começou em Janeiro de 2014, na Cidade do Cabo, na África do Sul, conseguiu em apenas um dia ajudar mais de 3.500 pessoas em situação de rua. Os precursores então transformaram a ação em um movimento.</p>
-        <p>Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.</p>
-        <p>Hoje mais de 1000 edições já foram realizadas pelo mundo. Aqui no DF, nosso principal objetivo é levar o projeto para as regiões mais carentes, auxiliando moradores da periferia e pessoas em situação de rua.</p>
-        <a target="_blank" href="#" class="btn">Veja o vídeo <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play"></a>
+        <div class="article-content">
+          <?php echo $sobre_nos['texto']; ?>
+        </div>
+        <a
+          target="<?php echo get_property_safe($sobre_nos['link'], 'target'); ?>"
+          href="<?php echo get_property_safe($sobre_nos['link'], 'url') ?? '#'; ?>"
+          class="btn"
+        >
+          <?php echo get_property_safe($sobre_nos['link'], 'title'); ?>
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play.svg" alt="Botão de play">
+        </a>
       </div>
     </section>
 
+    <?php $numeros = get_field('numeros'); ?>
     <section id="numeros" class="container numeros">
       <h2>Números</h2>
       <div class="num-card">
-        <h4>+10</h4>
-        <p>lojas espalhadas pelo mundo</p>
+        <h4><?php echo get_property_safe($numeros['card_1'], 'numero'); ?></h4>
+        <p><?php echo get_property_safe($numeros['card_1'], 'descricao'); ?></p>
       </div>
       <div class="num-card">
-        <h4>+10</h4>
-        <p>lojas espalhadas pelo mundo</p>
+        <h4><?php echo get_property_safe($numeros['card_2'], 'numero'); ?></h4>
+        <p><?php echo get_property_safe($numeros['card_2'], 'descricao'); ?></p>
       </div>
       <div class="num-card">
-        <h4>+10</h4>
-        <p>lojas espalhadas pelo mundo</p>
+        <h4><?php echo get_property_safe($numeros['card_3'], 'numero'); ?></h4>
+        <p><?php echo get_property_safe($numeros['card_3'], 'descricao'); ?></p>
       </div>
     </section>
 
+    <?php $galeria_cabecalho = get_cmb_field('galeria_cabecalho')[0]; ?>
+    <?php $galeria_fotos = get_cmb_field('galeria_fotos'); ?>
     <section class="galeria container">
       <h2>
-        <span>Algumas fotos</span>
-        Galeria
+        <span><?php echo $galeria_cabecalho['titulo_fundo']; ?></span>
+        <?php echo $galeria_cabecalho['titulo']; ?>
       </h2>
       <ul class="galeria-fts swiper-wrapper">
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
-        <li class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/exemplo.jpg" alt="">
-        </li>
+        <?php if (is_array($galeria_fotos)): foreach ($galeria_fotos as $foto): ?>
+          <li class="swiper-slide">
+            <img
+              src="<?php echo $foto['imagem']; ?>"
+              alt="<?php echo get_image_alt_text($foto['imagem_id']); ?>"
+            >
+          </li>
+        <?php endforeach; endif; ?>
       </ul>
     </section>
 
     <span id="ajude" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
+    <?php $faca_parte = get_field('faca_sua_parte'); ?>
     <section class="ajude container">
       <h2>
-        <span>Texto legal</span>
-        Faça sua parte
+        <span>
+          <?php echo $faca_parte['titulo_fundo']; ?>
+        </span>
+        <?php echo $faca_parte['titulo']; ?>
       </h2>
       <article class="ajude__content">
-        <h3>São diversas formas que você pode ajudar</h3>
-        <ul>
-          <li>Se você é empresário(a) fornecendo algum serviço no dia do evento;</li>
-          <li>Contribuição financeira;</li>
-          <li>Sendo voluntario no projeto</li>
-          <li>Compartilhando e divulgando o projeto;</li>
-          <li>Com a doação de roupas e sapatos nos pontos de coleta</li>
-        </ul>
+        <?php echo $faca_parte['texto']; ?>
       </article>
-      <a target="_blank" href="#" class="btn">Entre no grupo do Whatsapp</a>
+      <a
+          target="<?php echo get_property_safe($faca_parte['link'], 'target'); ?>"
+          href="<?php echo get_property_safe($faca_parte['link'], 'url') ?? '#'; ?>"
+          class="btn"
+        >
+          <?php echo get_property_safe($faca_parte['link'], 'title'); ?>
+        </a>
     </section>
 
     <span id="parceiros" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <?php $parceiros = get_cmb_field('parceiros_imagens'); ?>
     <section class="parceiros container">
       <h4>Parceiros</h4>
       <div class="marcas">
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
+        <?php if (is_array($parceiros)): foreach ($parceiros as $parceiro): ?>
+          <div class="marca">
+            <img
+              src="<?php echo $parceiro['imagem']; ?>"
+              alt="<?php echo get_image_alt_text($parceiro['imagem_id']); ?>"
+            >
+          </div>
+        <?php endforeach; endif; ?>
       </div>
     </section>
 
     <span id="patrocinadores" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <?php $patrocinadores = get_cmb_field('patrocinadores_imagens'); ?>
     <section class="patrocinadores container">
       <h4>Patrocinadores</h4>
       <div class="marcas">
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
+        <?php if (is_array($patrocinadores)): foreach ($patrocinadores as $patrocinador): ?>
+          <div class="marca">
+            <img
+              src="<?php echo $patrocinador['imagem']; ?>"
+              alt="<?php echo get_image_alt_text($patrocinador['imagem_id']); ?>"
+            >
+          </div>
+        <?php endforeach; endif; ?>
       </div>
     </section>
 
     <span id="apoiadores" style="padding-top: 1rem; margin-top: -1rem; display: block;"></span>
+    <?php $apoiadores = get_cmb_field('apoiadores_imagens'); ?>
     <section class="apoiadores container">
       <h4>Apoiadores</h4>
       <div class="marcas">
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
-        <div class="marca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo da "></div>
+        <?php if (is_array($apoiadores)): foreach ($apoiadores as $apoiador): ?>
+          <div class="marca">
+            <img
+              src="<?php echo $apoiador['imagem']; ?>"
+              alt="<?php echo get_image_alt_text($apoiador['imagem_id']); ?>"
+            >
+          </div>
+        <?php endforeach; endif; ?>
       </div>
     </section>
 <?php get_footer(); ?>

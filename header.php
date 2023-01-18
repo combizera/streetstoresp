@@ -44,7 +44,13 @@
             <a href="#ajude">Faça parte</a>
           </li>
           <li>
-            <a target="_blank" href="https://docs.google.com/forms/d/1tmB_iWGqwRTa3tekdmoz8ObLLFPpJK8bynw-v6ou-X4/viewform?edit_requested=true">Fale com a gente</a>
+            <?php $cadastro = get_field('cadastro'); ?>
+            <a
+              target="_blank"
+              href="<?php echo $cadastro['link']; ?>"
+            >
+              Fale com a gente
+            </a>
           </li>
         </ul>
       </nav>
