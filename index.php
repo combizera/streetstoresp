@@ -39,7 +39,7 @@ get_header();
         </div>
         <a
           target="<?php echo get_property_safe($quem_somos['link'], 'target'); ?>"
-          href="<?php echo get_property_safe($quem_somos['link'], 'url') ?? '#'; ?>"
+          href="<?php echo get_property_safe($quem_somos['link'], 'url', '#'); ?>"
           class="btn"
         >
           <?php echo get_property_safe($quem_somos['link'], 'title'); ?>
@@ -91,7 +91,7 @@ get_header();
         </div>
         <a
           target="<?php echo get_property_safe($sobre_nos['link'], 'target'); ?>"
-          href="<?php echo get_property_safe($sobre_nos['link'], 'url') ?? '#'; ?>"
+          href="<?php echo get_property_safe($sobre_nos['link'], 'url', '#'); ?>"
           class="btn"
         >
           <?php echo get_property_safe($sobre_nos['link'], 'title'); ?>
@@ -150,7 +150,7 @@ get_header();
       </article>
       <a
           target="<?php echo get_property_safe($faca_parte['link'], 'target'); ?>"
-          href="<?php echo get_property_safe($faca_parte['link'], 'url') ?? '#'; ?>"
+          href="<?php echo get_property_safe($faca_parte['link'], 'url', '#'); ?>"
           class="btn"
         >
           <?php echo get_property_safe($faca_parte['link'], 'title'); ?>

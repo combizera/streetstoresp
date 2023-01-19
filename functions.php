@@ -19,13 +19,27 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js', ['swiper-js'], null, true);
 });
 
-function get_property_safe(object|array|bool $obj, string $key) {
-  if (!$obj) {
-    return null;
+function get_property_safe($obj, $keys, $fallback_value = null) {
+  $is_key_array = gettype($keys) === 'array';
+
+  if ($is_key_array && count($keys) === 0) {
+    return $fallback_value;
   }
 
-  return property_exists((object) $obj, $key) ? $obj[$key] : '';
+  $key = $is_key_array ? $keys[0] : $keys;
+
+  if (!$obj || !property_exists((object) $obj, $key)) {
+    return $fallback_value;
+  }
+
+  $obj_value = gettype($obj) === 'object' ? $obj->$key : $obj[$key];
+
+  if ($is_key_array && count($keys) > 1) {
+    return get_property_safe($obj_value, array_slice($keys, 1));
+  }
+  return $obj_value;
 }
+
 function get_image_alt_text($image_id) {
   $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
   return (bool) $alt_text ? $alt_text : '';
