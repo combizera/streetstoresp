@@ -30,7 +30,8 @@
       </div>
 
       <nav class="header-nav" data-menu="list" role="menu">
-        <button id="btn-mobile" data-menu="button" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">Menu
+        <button id="btn-mobile" data-menu="button" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">
+          Menu
           <span id="hamburguer"></span>
         </button>
         <ul id="menu">
@@ -47,7 +48,7 @@
             <?php $cadastro = get_field('cadastro'); ?>
             <a
               target="_blank"
-              href="<?php echo $cadastro['link']; ?>"
+              href="<?php echo get_property_safe($cadastro, 'link', '#'); ?>"
             >
               Fale com a gente
             </a>
