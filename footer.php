@@ -8,9 +8,12 @@
             <li><a target="_blank" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-whatsapp.svg" alt="Ícone do Whatsapp"></a></li>
           </ul>
         </div>
+        <div class="footer-credits">
+          Desenvolvido com 🤍 por <a href="https://agenciasolary.com.br/">Solary</a>
+        </div>
       </footer>
     </main>
-    
+
     <?php wp_footer(); ?>
   </body>
 </html>

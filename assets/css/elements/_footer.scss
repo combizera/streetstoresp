@@ -24,4 +24,17 @@ footer {
       opacity: 0.6;
     }
   }
+  .footer-credits {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    line-height: 140%;
+
+    a {
+      font-size: 1.125em;
+      color: inherit;
+    }
+  }
 }
