@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -19,7 +21,6 @@ body {
   color: #555;
   font-size: 1.125rem;
   line-height: 130%;
-  overflow-x: hidden;
 }
 
 .container {
@@ -583,6 +584,7 @@ a {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 .galeria h2 {
   margin-bottom: 2rem;
@@ -642,6 +644,10 @@ a {
   }
 }
 
+.apoiadores {
+  padding-bottom: 7.5rem;
+}
+
 .marcas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -668,7 +674,6 @@ footer {
   justify-content: center;
   flex-direction: column;
   padding: 40px 0;
-  margin-top: 120px;
 }
 footer .footer-logo {
   max-width: 200px;
@@ -724,7 +729,6 @@ footer .footer-credits a {
 }
 .sigam-nos .instagram-iframe {
   position: relative;
-  overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
 }

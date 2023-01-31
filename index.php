@@ -152,7 +152,7 @@ get_header();
             allowfullscreen="true"
             data-instgrm-payload-id="instagram-media-payload-0"
             scrolling="yes"
-            style="background: transparent; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"
+            style="background: transparent; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; padding: 0px;"
             frameborder="0"
           ></iframe>
         </div>
@@ -226,4 +226,5 @@ get_header();
         <?php endforeach; endif; ?>
       </div>
     </section>
+  </main>
 <?php get_footer(); ?>

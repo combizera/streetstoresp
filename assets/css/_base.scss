@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -33,7 +35,6 @@ body {
   color: $black-normal;
   font-size: 1.125rem;
   line-height: 130%;
-  overflow-x: hidden;
 }
 
 // Responsividade
