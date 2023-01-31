@@ -3,7 +3,8 @@
 get_header();
 ?>
   <main>
-    <section class="hero">
+    <?php $hero = get_field('hero'); ?>
+    <section class="hero" style="--image-url: url(<?php echo get_property_safe($hero, 'imagem', get_stylesheet_directory_uri() . '/assets/img/bg-hero.jpg'); ?>)">
       <div class="hero-logo">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Logotipo StreetStore SP">
       </div>

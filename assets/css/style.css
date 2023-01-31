@@ -462,7 +462,7 @@ a {
 }
 
 .hero {
-  background: url("./../img/bg-hero.jpg") no-repeat center 20%;
+  background: var(--image-url) no-repeat center 20%;
   background-size: cover;
   min-height: 35rem;
   height: 100vh;
