@@ -1,0 +1,41 @@
+.sigam-nos {
+  margin-bottom: 7.5rem;
+
+  h2 {
+    @extend %section-title;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    @include responsive(s) {
+      font-size: 2.5rem;
+    }
+
+    span {
+      @extend %section-background-title;
+      width: min-content;
+      @include responsive(s) {
+        font-size: 4.5rem;
+        line-height: 3.5rem;
+      }
+    }
+  }
+
+  .instagram-iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+
+    > iframe {
+      width: 100%;
+      height: auto;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

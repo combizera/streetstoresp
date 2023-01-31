@@ -136,6 +136,27 @@ get_header();
       </ul>
     </section>
 
+    <section class="sigam-nos container">
+        <h2>
+          <span>
+            Sigam nos
+          </span>
+          Acompanhe nosso Insta
+        </h2>
+        <div class="instagram-iframe">
+          <iframe
+            class="instagram-media instagram-media-rendered"
+            src="https://www.instagram.com/streetstoresp/embed/"
+            allowtransparency="true"
+            allowfullscreen="true"
+            data-instgrm-payload-id="instagram-media-payload-0"
+            scrolling="yes"
+            style="background: transparent; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"
+            frameborder="0"
+          ></iframe>
+        </div>
+    </section>
+
     <span id="ajude" style="padding-top: 8rem; margin-top: -8rem; display: block;"></span>
     <?php $faca_parte = get_field('faca_sua_parte'); ?>
     <section class="ajude container">
