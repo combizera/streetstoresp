@@ -7,7 +7,6 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -21,6 +20,15 @@ body {
   color: #555;
   font-size: 1.125rem;
   line-height: 130%;
+}
+
+main {
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .container {
@@ -584,7 +592,6 @@ a {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
 }
 .galeria h2 {
   margin-bottom: 2rem;
@@ -728,18 +735,22 @@ footer .footer-credits a {
   }
 }
 .sigam-nos .instagram-iframe {
-  position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  max-width: 62.5rem;
+  margin: 0 auto;
 }
 .sigam-nos .instagram-iframe > iframe {
   width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  max-height: 53rem;
+  height: calc(23rem + 45vw);
+}
+@media screen and (max-width: 960px) {
+  .sigam-nos .instagram-iframe > iframe {
+    height: calc(23rem + 36vw);
+  }
+}
+@media screen and (max-width: 540px) {
+  .sigam-nos .instagram-iframe > iframe {
+    height: calc(23rem + 8vw);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -67,7 +67,7 @@ get_header();
     <?php $sobre_nos = get_field('sobre_nos'); ?>
     <section class="sobre container">
       <div class="sec-img">
-      <img
+        <img
           src="<?php echo get_property_safe($sobre_nos['imagem_1'], 'url'); ?>"
           alt="<?php echo get_property_safe($sobre_nos['imagem_1'], 'alt'); ?>"
         />
@@ -147,6 +147,7 @@ get_header();
         <div class="instagram-iframe">
           <iframe
             class="instagram-media instagram-media-rendered"
+            id="instagram-embed"
             src="https://www.instagram.com/streetstoresp/embed/"
             allowtransparency="true"
             allowfullscreen="true"
