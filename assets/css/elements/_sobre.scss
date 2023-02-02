@@ -8,10 +8,6 @@
 
   h2 {
     @extend %section-title;
-
-    span {
-      @extend %section-background-title;
-    }
   }
 
   .sec-img {

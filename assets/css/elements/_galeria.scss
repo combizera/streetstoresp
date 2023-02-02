@@ -10,15 +10,6 @@
   h2 {
     @extend %section-title;
     margin-bottom: 2rem;
-
-    span {
-      @extend %section-background-title;
-      width: auto;
-    }
-  }
-  span {
-    left: 50%;
-    transform: translate(-50%);
   }
   ul {
     img {

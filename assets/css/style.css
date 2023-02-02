@@ -90,9 +90,9 @@ ul {
   font-family: "Rustico", sans-serif;
   font-weight: 400;
   font-size: 4.5rem;
-  color: #fff;
-  text-shadow: 1px 1px 8px rgba(34, 34, 34, 0.25);
+  color: #b39579;
   text-transform: uppercase;
+  text-align: center;
   display: block;
   margin-bottom: -1rem;
 }
@@ -125,20 +125,6 @@ ul {
   .sigam-nos h2, .ajude h2, .galeria h2, .sobre h2, .quem-somos h2 {
     font-size: 2.5rem;
   }
-}
-
-.sigam-nos h2 span, .ajude h2 span, .galeria h2 span, .sobre h2 span {
-  margin: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  text-align: center;
-  text-shadow: 1px 1px 8px rgba(34, 34, 34, 0.25);
 }
 
 .sobre, .quem-somos {
@@ -596,13 +582,6 @@ a {
 .galeria h2 {
   margin-bottom: 2rem;
 }
-.galeria h2 span {
-  width: auto;
-}
-.galeria span {
-  left: 50%;
-  transform: translate(-50%);
-}
 .galeria ul img {
   max-width: 100%;
 }
@@ -721,17 +700,6 @@ footer .footer-credits a {
 @media screen and (max-width: 960px) {
   .sigam-nos h2 {
     font-size: 2.5rem;
-  }
-}
-.sigam-nos h2 span {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-@media screen and (max-width: 960px) {
-  .sigam-nos h2 span {
-    font-size: 4.5rem;
-    line-height: 3.5rem;
   }
 }
 .sigam-nos .instagram-iframe {

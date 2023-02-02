@@ -138,9 +138,9 @@ ul {
     font-family: 'Rustico', sans-serif;
     font-weight: 400;
     font-size: 4.5rem;
-    color: #fff;
-    text-shadow: 1px 1px 8px rgba(34, 34, 34, 0.25);
+    color: #b39579;
     text-transform: uppercase;
+    text-align: center;
     display: block;
     margin-bottom: -1rem;
 
@@ -164,18 +164,6 @@ ul {
   @include responsive(xs) {
     font-size: 2.5rem;
   }
-}
-
-%section-background-title {
-  margin: 0;
-  width: fit-content;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  text-align: center;
-  text-shadow: 1px 1px 8px rgba(34, 34, 34, 0.25);
 }
 
 %section {

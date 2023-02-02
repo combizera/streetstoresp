@@ -6,10 +6,6 @@
   h2 {
     @extend %section-title;
     margin-bottom: 2rem;
-
-    span {
-      @extend %section-background-title;
-    }
   }
 
   &__content {
