@@ -20,7 +20,8 @@
 .marcas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  justify-items: center;
+  gap: 40px;
   margin-top: 5rem;
   @include responsive(s) {
     grid-template-columns: repeat(2, 1fr);
@@ -29,5 +30,9 @@
 }
 
 .marca {
-  max-width: 344px;
+  max-width: 200px;
+  filter: grayscale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

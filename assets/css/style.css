@@ -190,10 +190,10 @@ ul {
     grid-template-rows: auto;
   }
   .sobre .sec-img :first-child, .quem-somos .sec-img :first-child,
-.sobre .sec-img :nth-child(2),
-.quem-somos .sec-img :nth-child(2),
-.sobre .sec-img :last-child,
-.quem-somos .sec-img :last-child {
+  .sobre .sec-img :nth-child(2),
+  .quem-somos .sec-img :nth-child(2),
+  .sobre .sec-img :last-child,
+  .quem-somos .sec-img :last-child {
     grid-column: 1/-1;
     display: none;
   }
@@ -619,13 +619,13 @@ a {
 }
 @media screen and (max-width: 960px) {
   .parceiros,
-.patrocinadores,
-.apoiadores {
+  .patrocinadores,
+  .apoiadores {
     padding: 0;
   }
   .parceiros h4,
-.patrocinadores h4,
-.apoiadores h4 {
+  .patrocinadores h4,
+  .apoiadores h4 {
     font-size: min(2.5rem, 10vw);
   }
 }
@@ -637,7 +637,8 @@ a {
 .marcas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  justify-items: center;
+  gap: 40px;
   margin-top: 5rem;
 }
 @media screen and (max-width: 960px) {
@@ -648,7 +649,11 @@ a {
 }
 
 .marca {
-  max-width: 344px;
+  max-width: 200px;
+  filter: grayscale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
